@@ -45,6 +45,7 @@
          -moz-border-radius: 35px;
          -ms-border-radius: 35px;
          -o-border-radius: 35px;
+          box-shadow: -6px 4px 1px 20px hsl(213deg 55% 10%), 0px 14px 1px 20px hsl(213deg 55% 10%);
      }
  }
 
