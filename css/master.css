@@ -237,7 +237,7 @@
      .equil-description .info img:last-of-type {
         right: 72px;
      }
-  .equil-description .info p:last-child {
+    .equil-description .info p:first-of-type{
        padding: 0 30px 0 13px;
   }
  }
