@@ -1,0 +1,315 @@
+ /* Start Variables */
+ :root {
+     --main-background-color: hsl(217, 54%, 11%);
+     --card-color: hsl(216, 50%, 16%);
+     --main-color-alt: hsl(178, 100%, 50%);
+     --text-color: hsl(215, 51%, 70%);
+     --line-color: hsl(215, 32%, 27%);
+     --main-transition: 0.3s;
+
+ }
+
+ /* End Variables */
+
+
+ /* Start Global Rules */
+ body {
+     font-family: 'Outfit', sans-serif;
+     background-color: var(--main-background-color);
+ }
+
+ main {
+     /* border: 50px solid hsl(213deg 55% 10%); */
+     box-shadow: -15px 62px 1px 20px hsl(213deg 55% 10%),
+      13px 62px 1px 20px hsl(213deg 55% 10%);
+     background-color: var(--card-color);
+     margin: 100px auto;
+     display: flex;
+     flex-direction: column;
+     border-radius: 63px;
+     width: fit-content;
+     padding: 35px;
+     -webkit-border-radius: 63px;
+     -moz-border-radius: 63px;
+     -ms-border-radius: 63px;
+     -o-border-radius: 63px;
+ }
+
+ @media (max-width:767px) {
+     main {
+         padding: 25px;
+         border-width: 20px;
+         max-width: 375px;
+         border-radius: 35px;
+         -webkit-border-radius: 35px;
+         -moz-border-radius: 35px;
+         -ms-border-radius: 35px;
+         -o-border-radius: 35px;
+     }
+ }
+
+ @media (min-width:767px) {
+     main {
+         max-width: 1440px;
+     }
+ }
+
+ /* End Global Rules */
+
+
+ /* Start equil Main */
+ .equil-main {
+     flex-basis: 30%;
+ }
+
+ .equil-main .image {
+     transition: var(--main-transition);
+     position: relative;
+     -webkit-transition: var(--main-transition);
+     -moz-transition: var(--main-transition);
+     -ms-transition: var(--main-transition);
+     -o-transition: var(--main-transition);
+ }
+
+ .equil-main .image::before {
+     transition: var(--main-transition);
+     content: "";
+     width: 100%;
+     height: 99.2%;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     background-color: var(--main-color-alt);
+     z-index: -2;
+     opacity: 50%;
+     border-radius: 20px;
+     -webkit-transition: var(--main-transition);
+     -moz-transition: var(--main-transition);
+     -ms-transition: var(--main-transition);
+     -o-transition: var(--main-transition);
+ }
+
+ @media (max-width:767px) {
+     .equil-main .image img {
+         height: 300px;
+     }
+
+     .equil-main .image {
+         border-radius: 10px;
+         -webkit-border-radius: 10px;
+         -moz-border-radius: 10px;
+         -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+     }
+ }
+
+ .equil-main .image::after {
+     display: none;
+     content: url(../images/icon-view.svg);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 3;
+ }
+
+ .equil-main .image img {
+     border-radius: 20px;
+     max-width: 100%;
+     -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+     -ms-border-radius: 20px;
+     -o-border-radius: 20px;
+     transition: var(--main-transition);
+     -webkit-transition: var(--main-transition);
+     -moz-transition: var(--main-transition);
+     -ms-transition: var(--main-transition);
+     -o-transition: var(--main-transition);
+ }
+
+ .equil-main .image:hover::before {
+     cursor: pointer;
+     z-index: 2;
+ }
+
+ .equil-main .image:hover::after {
+     display: block;
+ }
+
+ .equil-main .image:hover img {
+     background-color: var(--main-color-alt);
+ }
+
+
+ /* End equil Main */
+
+
+ /* Start Equil Description */
+ .equil-description {
+     flex-basis: 70%;
+ }
+
+ .equil-description h3 {
+     transition: var(--main-transition);
+     margin: 20px 0;
+     font-size: 45px;
+     color: white;
+     -webkit-transition: var(--main-transition);
+     -moz-transition: var(--main-transition);
+     -ms-transition: var(--main-transition);
+     -o-transition: var(--main-transition);
+ }
+
+ @media (max-width:767px) {
+     .equil-description h3 {
+         font-size: 25px;
+     }
+
+ }
+
+ .equil-description h3:hover {
+     cursor: pointer;
+     color: var(--main-color-alt);
+ }
+
+ .equil-description>p {
+     font-size: 35px;
+     color: var(--text-color);
+ }
+
+ @media (max-width:767px) {
+     .equil-description>p {
+         font-size: 17px;
+     }
+
+ }
+
+ .equil-description .info {
+     position: relative;
+     display: flex;
+     justify-content: space-between;
+     font-size: 35px;
+ }
+
+ .equil-description .info img:first-child {
+     max-width: 100%;
+     height: 38%;
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     left: -5px;
+     -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+     -ms-transform: translateY(-50%);
+     -o-transform: translateY(-50%);
+ }
+
+
+ .equil-description .info p:first-of-type {
+     color: var(--main-color-alt);
+     padding: 0 30px;
+ }
+
+ @media (max-width:767px) {
+     .equil-description .info {
+         font-size: 15px;
+     }
+ }
+
+ .equil-description .info p:last-child {
+     position: relative;
+     color: var(--text-color);
+ }
+
+
+ .equil-description .info img:last-of-type {
+     top: 50%;
+     position: absolute;
+     right: 170px;
+     transform: translateY(-50%);
+     max-width: 100%;
+     height: 38%;
+ }
+
+ @media (max-width:767px) {
+     .equil-description .info img:last-of-type {
+         right: 100px;
+     }
+ }
+
+ /* End Equil Description */
+
+
+ /* Start Footer */
+
+ .footer {
+     position: relative;
+     display: flex;
+     align-items: center;
+ }
+
+ .footer::before {
+     content: "";
+     position: absolute;
+     top: -9px;
+     right: -5px;
+     width: calc(100% + 12px);
+     height: 1px;
+     background-color: var(--line-color);
+ }
+
+ .footer .image {
+     display: contents;
+ }
+
+ .footer .image img {
+     margin-right: 10px;
+     max-width: 18%;
+     outline: 1px solid white;
+     border-radius: 50%;
+     filter: blur(3px);
+ }
+
+ @media (max-width:767px) {
+     .footer .image img {
+         max-width: 15%;
+     }
+ }
+
+ .footer p {
+     font-size: 30px;
+     color: var(--text-color);
+ }
+
+ @media (max-width:767px) {
+     .footer p {
+         font-size: 12px;
+     }
+ }
+
+ .footer p a {
+     transition: var(--main-transition);
+     color: white;
+     text-decoration: none;
+     -webkit-transition: var(--main-transition);
+     -moz-transition: var(--main-transition);
+     -ms-transition: var(--main-transition);
+     -o-transition: var(--main-transition);
+ }
+
+ .footer p a:hover {
+     color: var(--main-color-alt);
+ }
+
+ /* End Footer */
+
+
+ .attribution {
+     font-size: 11px;
+     text-align: center;
+ }
+
+ .attribution a {
+     color: hsl(228, 45%, 44%);
+ }
