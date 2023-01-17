@@ -234,8 +234,11 @@
 
  @media (max-width:767px) {
      .equil-description .info img:last-of-type {
-         right: 100px;
+        right: 72px;
      }
+  .equil-description .info p:last-child {
+       padding: 0 30px 0 13px;
+  }
  }
 
  /* End Equil Description */
